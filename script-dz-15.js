@@ -11,7 +11,6 @@ function getMinNum(a,b){
         return a + '=' + b;
     }
 }
-
 console.log(getMinNum(firstNum, secondNum));
 
 // N2
@@ -21,7 +20,6 @@ let exponentValue = +(prompt('Enter exponentiation value'))
 function getNumToExpo(x,n){
     return x**n;
 }
-
 console.log(getNumToExpo(numberToE, exponentValue));
 
 // N3
@@ -35,14 +33,13 @@ let userAge = +(prompt('Enter your age'))
 //     }
 // }
 
-let ageCheck = userAge > 18 ? true : confirm('Батьки дозволили?');
-console.log(ageCheck);
-
-function checkAge(age) {
-    if (age > 0 && age < 18) {
-        return confirm('Батьки дозволили?');
-    } else {
-        return true;
-    }
+function checkAge1(age) {
+        return age > 18 ? true : confirm('Батьки дозволили?');
 }
-console.log(checkAge(userAge));
+console.log(checkAge1(userAge));
+
+function checkAge2(age) {
+        return age > 18 || confirm('Батьки дозволили?');
+}
+console.log(checkAge2(userAge));
+
